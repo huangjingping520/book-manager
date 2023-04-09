@@ -11,10 +11,21 @@ export default defineConfig({
   plugins: [
     vue(),
     AutoImport({
-      resolvers: [ElementPlusResolver()]
+      imports: [
+        'vue',
+        'vue-router'
+      ],
+      resolvers: [
+        ElementPlusResolver()
+      ],
+      vueTemplate: true
     }),
     Components({
-      resolvers: [ElementPlusResolver()]
+      extensions: ['vue', 'md'],
+      include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
+      resolvers: [
+        ElementPlusResolver()
+      ]
     })
   ],
   resolve: {
