@@ -9,7 +9,16 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    Admin: typeof import('./src/components/admin.vue')['default']
+    Book: typeof import('./src/components/book.vue')['default']
+    Borrow: typeof import('./src/components/borrow.vue')['default']
+    ElMain: typeof import('element-plus/es')['ElMain']
+    ElMenu: typeof import('element-plus/es')['ElMenu']
+    ElMenuItem: typeof import('element-plus/es')['ElMenuItem']
+    Return: typeof import('./src/components/return.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    Ticket: typeof import('./src/components/ticket.vue')['default']
+    User: typeof import('./src/components/user.vue')['default']
   }
 }
